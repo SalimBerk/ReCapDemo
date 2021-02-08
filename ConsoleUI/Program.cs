@@ -10,11 +10,39 @@ namespace ConsoleUI
 		static void Main(string[] args)
 		{
 			CarManager carManager = new CarManager(new EfCarDal());
+			Console.WriteLine(" ");
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("--------------------------ARAÇLAR LİSTESİ-----------------------------");
+			Console.WriteLine("\n\n");
+			Console.ResetColor();
+			Console.ForegroundColor = ConsoleColor.Yellow;
 			foreach (var car in carManager.GetCarDetailDtos())
 			{
-				Console.WriteLine(car.Description + "/" + car.BrandName + "/" + car.ColorName + "/" + car.DailyPrice);
+
+				Console.WriteLine($"MARKA ADLARINI LİSTELE:{car.BrandName}");
 
 			}
+			Console.ResetColor();
+			Console.WriteLine("\n\n");
+
+			Console.ForegroundColor = ConsoleColor.Magenta;
+			foreach (var car in carManager.GetCarDetailDtos())
+			{
+				Console.WriteLine($"MARKA RENKLERİNİ LİSTELE:{car.BrandName}");
+
+
+			}
+			Console.ResetColor();
+			Console.WriteLine("\n\n");
+			Console.ForegroundColor = ConsoleColor.DarkGreen;
+			foreach (var car in carManager.GetCarDetailDtos())
+			{
+				Console.WriteLine($"MARKA FİYATLARINI LİSTELE:{car.DailyPrice}");
+
+
+			}
+			Console.ResetColor();
+
 			//BrandManager brandManager = new BrandManager(new EfBrandDal());
 			//ColorManager colorManager = new ColorManager(new EfColorDal());
 
