@@ -63,10 +63,6 @@ namespace Business.Concrete
 			return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.ModelYear == year));
 		}
 
-		public IDataResult<List<CarDetailDto>> GetCarDetails()
-		{
-			return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetailDto());
-		}
 
 		public IResult Update(Car car)
 		{
