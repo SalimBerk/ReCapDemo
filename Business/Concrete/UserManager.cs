@@ -42,7 +42,7 @@ namespace Business.Concrete
 				return new ErrorDataResult<User>(Messages.UserNotFound);
 			}
 		
-			return new SuccessDataResult<User>(_userDal.Get(p => p.Id == userId));
+			return new SuccessDataResult<User>(_userDal.Get(p => p.Id== userId));
 
 			
 			

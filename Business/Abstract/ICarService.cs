@@ -10,7 +10,7 @@ namespace Business.Abstract
 {
 	public interface ICarService
     {
-        IResult Add(Car car);
+        
         IResult Update(Car car);
         IResult Delete(Car car);
         IDataResult<List<Car>> GetAll();
@@ -19,6 +19,6 @@ namespace Business.Abstract
         IDataResult<List<Car>> GetAllByBrandId(int id);
         IDataResult<List<Car>> GetByDailyPrice(decimal min, decimal max);
         IDataResult<List<Car>> GetByModelYear(string year);
-
-    }
+		IResult Add(Car car);
+	}
 }
