@@ -41,5 +41,7 @@ namespace Business.Constants
         public static string RentUpdated = "Kiralama bilgisi güncellendi";
 
         public static string MaintenanceTime = "Saat 22:00 ile 23:00 arası bakım zamanıdır.";
-    }
+
+        public static string CarImageLimitExceeded = "Resim limiti aştınız";
+	}
 }
